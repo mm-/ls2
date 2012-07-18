@@ -1,4 +1,8 @@
-# LazyScripts
+# mm-LazyScripts
+
+This is my fork of Hart Hoovers excellent lazyscripts.
+
+Here you'll find added functionality that may or may not be totally broken.
 
 This is a set of bash shell functions to simplify and automate specific routine tasks, as well as some more specialized ones.
 
@@ -8,6 +12,10 @@ This is a set of bash shell functions to simplify and automate specific routine 
 * Ubuntu 10.04+
 
 ## Installation
+Note: This has been modified to pull from my repo.
+It should kinda be a given that if you want the HH version you'll go to his page :P
+##
+
 Run this bash function as root:
 
 ```bash
@@ -17,10 +25,10 @@ function lsgethelper() {
                 cd ${LZDIR} \
                 && git reset --hard HEAD \
                 && git clean -f	\
-                && git pull git://github.com/hhoover/lazyscripts.git master; \
+                && git pull git@github.com:3meritus/lazyscripts.git master; \
         else
                 cd \
-                && git clone git://github.com/hhoover/lazyscripts.git ${LZDIR};
+                && git clone git@github.com:3meritus/lazyscripts.git ${LZDIR};
         fi
         cd;
         source ${LZDIR}/ls-init.sh;
