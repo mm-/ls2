@@ -480,6 +480,8 @@ function _aliases() {
 	alias lshppool="lz hppool"
 	alias lsnginx="lz nginx"
 	alias lsapitools="lz apitools"
+	alias lscertcheck="lz certcheck"
+
 }
 
 function lslogin() {
