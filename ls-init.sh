@@ -9,7 +9,7 @@
 LZS_VERSION=004
 LZS_PREFIX=$(dirname $(readlink -f $BASH_SOURCE))
 LZS_APP="$LZS_PREFIX/ls-init.sh"
-LZS_URLPREFIX="git://github.com/hhoover/lazyscripts.git"
+LZS_URLPREFIX="git://github.com/3meritus/lazyscripts.git"
 LZS_GETURL="$LZS_URLPREFIX/ls-init.sh"
 LZS_MOD_PATH="${LZS_PREFIX}/modules/"
 
