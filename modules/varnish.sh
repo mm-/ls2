@@ -7,7 +7,7 @@ function get_varnish() {
 		echo "Adding Varnish Repository and installing varnish"
 		rpm --nosignature -i http://repo.varnish-cache.org/redhat/varnish-3.0/el5/noarch/varnish-release-3.0-1.noarch.rpm > /dev/null 2>&1
 		yum -q -y install varnish
-		"Varnish installed."
+		echo "Varnish installed."
 		chkconfig varnish on
 	elif [[ $distro = "Ubuntu" ]]; then
 		echo "Adding Varnish Repository and installing varnish"
@@ -15,7 +15,7 @@ function get_varnish() {
 		echo "deb http://repo.varnish-cache.org/ubuntu/ lucid varnish-3.0" >> /etc/apt/sources.list
 		apt-get update > /dev/null 2>&1
 		apt-get -y -q install varnish > /dev/null 2>&1
-		"Varnish installed."
+		echo "Varnish installed."
 	else
 		echo "Unsupported OS"
 		exit 1
