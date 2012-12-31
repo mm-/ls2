@@ -16,19 +16,26 @@ Note: This has been modified to pull from my repo.
 It should kinda be a given that if you want the HH version you'll go to his page :P
 ##
 
+Run this bash function as root:
 
-This is my replacement for the original function.
-
-It will check for git an auto-install it if necessary, plus is generally cleaner and easier to understand.
-
-
+```bash
+function lsgethelper() {
+        local LZDIR=/root/.lazyscripts/tools;
+        if [ -d ${LZDIR} ]; then
+                cd ${LZDIR} \
+                && git reset --hard HEAD \
+                && git clean -f	\
+                && git pull git@github.com:3meritus/lazyscripts.git master; \
+        else
+                cd \
+                && git clone git@github.com:3meritus/lazyscripts.git ${LZDIR};
+        fi
+        cd;
+        source ${LZDIR}/ls-init.sh;
+}
+lsgethelper && lslogin
 ```
-gh="git://github.com/mm-/lazyscripts.git"; git --version &>/dev/null || ( yum -h &>/dev/null && yum -y install git || apt-get -y install git ) ; LZDIR=/root/.lazyscripts/tools; if [ -d $LZDIR ]; then cd $LZDIR && git reset --hard HEAD && git clean -f && git pull $gh master; else git clone $gh $LZDIR; fi; source $LZDIR/ls-init.sh && lslogin
-```
-
-Copy paste this into a shell session to load Lazyscripts
-
-
+Throw this in your .bashrc for extra credit.
 ## Functions
 | **Function** | **Description** |
 |:-------------|:----------------|
