@@ -463,6 +463,11 @@ function horizontal_row() {
 
 function lswhatis() { export -f $1; export -pf; export -fn $1; }
 
+
+## This needs to be rewritten to auto-build these aliases based on what's in the 
+## modules directory. This should make it way easier to add the custom directory.
+
+
 function _aliases() {
 	alias lsvhost="lz vhost"
 	alias lsdrupal="lz drupal"
@@ -483,6 +488,8 @@ function _aliases() {
 	alias lscertcheck="lz certcheck"
 
 }
+
+
 
 function lslogin() {
 	# Set of commands to run at login
