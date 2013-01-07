@@ -491,8 +491,10 @@ function lslogin() {
 	
 	while test $
         do 
-        user_repo = $1
+        user_repo=$1
         echo " custom repo is $user_repo"
+	break	
+
         done
 	
 	
