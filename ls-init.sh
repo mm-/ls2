@@ -467,27 +467,33 @@ function lswhatis() { export -f $1; export -pf; export -fn $1; }
 ## This needs to be rewritten to auto-build these aliases based on what's in the 
 ## modules directory. This should make it way easier to add the custom directory.
 
-
 function _aliases() {
-	alias lsvhost="lz vhost"
-	alias lsdrupal="lz drupal"
-	alias lsrpaf="lz rpaf"
-	alias lsparsar="lz parsar"
-	alias lspostfix="lz postfix"
-	alias lspma="lz pma"
-	alias lslsync="lz lsync"
-	alias lsvarnish="lz varnish"
-	alias lsvsftpd="lz vsftpd"
-	alias lswebmin="lz webmin"
-	alias lswordpress="lz wordpress"
-	alias lsnodejs="lz nodejs"
-	alias lshaproxy="lz haproxy"
-	alias lshppool="lz hppool"
-	alias lsnginx="lz nginx"
-	alias lsapitools="lz apitools"
-	alias lscertcheck="lz certcheck"
-
+	for module in `ls -1 LZS_MOD_PATH | cut -d . -f 1` 
+	   do
+	     alias "ls"$module="lz $module"
+	   done
 }
+
+#function _aliases() {
+#	alias lsvhost="lz vhost"
+#	alias lsdrupal="lz drupal"
+#	alias lsrpaf="lz rpaf"
+#	alias lsparsar="lz parsar"
+#	alias lspostfix="lz postfix"
+#	alias lspma="lz pma"
+#	alias lslsync="lz lsync"
+#	alias lsvarnish="lz varnish"
+#	alias lsvsftpd="lz vsftpd"
+#	alias lswebmin="lz webmin"
+#	alias lswordpress="lz wordpress"
+#	alias lsnodejs="lz nodejs"
+#	alias lshaproxy="lz haproxy"
+#	alias lshppool="lz hppool"
+#	alias lsnginx="lz nginx"
+#	alias lsapitools="lz apitools"
+#	alias lscertcheck="lz certcheck"
+
+#}
 
 
 
