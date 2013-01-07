@@ -472,38 +472,45 @@ function _aliases() {
 	done
 }
 
-function user_custom () {
-	echo "test"
+function lscustomlogin () {
+	
+
+        while test -n $CUSTOM_REPO
+        
+	do 
+
+        local CUSTOM_LZDIR=/root/.lazyscripts/custom_tools;
+        rm -rf $CUSTOM_LZDIR
+        mkdir $CUSTOM_LZDIR
+        git clone $CUSTOM_REPO $CUSTOM_LZDIR
+        source $CUSTOM_LZDIR/ls2rc
+        break   
+
+        done
+
+
 
 }
 
+# The below function runs all necessary login commands
 
 function lslogin() {
-	# Set of commands to run at login
+
+	local CUSTOM_REPO=$1	
+
 	lsresize
 	tset -s xterm
+
 	clear
+
 	lscolors
 	lsinfo
 	lscolorprompt
 	lscpchk
 	cat /etc/motd
-	
-	while test $
-        do 
 
-        user_repo=$1
-        echo "custom repo is $user_repo"
-	local CUSTOM_LZDIR=/root/.lazyscripts/custom_tools;
-	rm -rf $CUSTOM_LZDIR
-	mkdir $CUSTOM_LZDIR
-	git clone $user_repo $CUSTOM_LZDIR
-	source $CUSTOM_LZDIR/ls2rc
-	break	
+	lscustomlogin		
 
-        done
-	
-	
 	echo -e "ls2 - mm"
 }
 
