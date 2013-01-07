@@ -489,14 +489,12 @@ function lslogin() {
 	lscpchk
 	cat /etc/motd
 	
-	while getopts ":c" opt 
-	  do
-	     case $opt in
-		c)
-		   echo "Custom repo: $OPTARG"
-		   ;;
-             esac
-	  done
+	while test $
+        do 
+        user_repo = $1
+        echo " custom repo is $user_repo"
+        done
+	
 	
 	echo -e "ls2 - mm"
 }
