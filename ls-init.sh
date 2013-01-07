@@ -473,8 +473,9 @@ function _aliases() {
 }
 
 function user_custom () {
+	echo "test"
 
-
+}
 
 
 function lslogin() {
@@ -488,13 +489,14 @@ function lslogin() {
 	lscpchk
 	cat /etc/motd
 	
-	while getopts ":c" opt; do
+	while getopts ":c" opt 
+	  do
 	     case $opt in
 		c)
 		   echo "Custom repo: $OPTARG"
 		   ;;
              esac
-	done
+	  done
 	
 	echo -e "ls2 - mm"
 }
