@@ -491,17 +491,13 @@ function lslogin() {
 	
 	while test $
         do 
+
         user_repo=$1
         echo "custom repo is $user_repo"
-	local CUSTOM_LZDIR=/root/.lazyscripts/user_tools;
-	  if [ -d $CUSTOM_LZDIR ]
-	    then
-		 rm -rf $CUSTOM_LZDIR/*
-		 git clone $user_repo $CUSTOM_LZDIR
-		 source $CUSTOM_LZDIR/ls2rc
-	  fi	
-
-
+	local CUSTOM_LZDIR=/root/.lazyscripts/custom_tools;
+	rm -rf $CUSTOM_LZDIR/*
+	git clone $user_repo $CUSTOM_LZDIR
+	source $CUSTOM_LZDIR/ls2rc
 	break	
 
         done
