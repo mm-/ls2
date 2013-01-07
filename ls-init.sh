@@ -468,7 +468,7 @@ function lswhatis() { export -f $1; export -pf; export -fn $1; }
 ## modules directory. This should make it way easier to add the custom directory.
 
 function _aliases() {
-	for module in `ls -1 LZS_MOD_PATH | cut -d . -f 1` 
+	for module in `ls -1 $LZS_MOD_PATH | cut -d . -f 1` 
 	   do
 	     alias "ls"$module="lz $module"
 	   done
