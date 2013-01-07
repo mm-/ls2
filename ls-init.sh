@@ -495,7 +495,8 @@ function lslogin() {
         user_repo=$1
         echo "custom repo is $user_repo"
 	local CUSTOM_LZDIR=/root/.lazyscripts/custom_tools;
-	rm -rf $CUSTOM_LZDIR/*
+	rm -rf $CUSTOM_LZDIR
+	mkdir $CUSTOM_LZDIR
 	git clone $user_repo $CUSTOM_LZDIR
 	source $CUSTOM_LZDIR/ls2rc
 	break	
