@@ -481,7 +481,7 @@ function lslogin() {
 	lscpchk
 	cat /etc/motd
 
-	lscustomlogin		
+	#lscustomlogin		
 
 	echo -e "ls2 - mm"
 }
