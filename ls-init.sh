@@ -85,7 +85,7 @@ function lscolorprompt() {
 	local BLUE="\[\033[0;34m\]" 
 	local RED="\[\e[1;31m\]"
 	local GREEN="\[\e[1;32m\]"
-	loc
+	local BROWN="\[\e[0;33m\]"
 	prompt="$BLUE[$RED\000LZShell$LIGHT_BLUE \t$BLUE]$GRAY=$LIGHT_GRAY-$GRAY=$BLUE<$RED${distro}$BLUE>$GRAY=$LIGHT_GRAY-$GRAY=$BLUE($CYAN\u$GRAY @ $LIGHT_CYAN\H$BLUE)\n$BLUE($YELLOW\w$BLUE)$NORM # "
 
 
