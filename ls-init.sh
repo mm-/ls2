@@ -377,6 +377,8 @@ function lshelp2() {
            do
              echo -e "    "$module"\t\tHelp Message."
         done
+}
+
 
 function lshelp() {
     horizontal_row
