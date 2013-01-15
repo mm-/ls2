@@ -375,7 +375,7 @@ function lsap() {
 function lshelp2() {
 	for module in `ls -1 $LZS_MOD_PATH | cut -d . -f 1`
            do
-             echo "    "ls""$module"\t\t"Help Message.""
+             echo -e "    ls"$module"\t\tHelp Message."
         done
 }
 
