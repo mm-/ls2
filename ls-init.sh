@@ -375,9 +375,9 @@ function lsap() {
 function lshelp2() {
 	for module in `ls -1 --color=never $LZS_MOD_PATH | cut -d . -f 1`
            do
-             echo -e "ls$module"
-	     echo -e '-----------------'
-	     echo -e "Help Message\n"
+             echo -e "ls$module\t\tHelpMessage"
+	  #   echo -e '-----------------'
+	  #   echo -e "Help Message\t"
 	     
         done
 }
