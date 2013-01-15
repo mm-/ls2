@@ -66,7 +66,6 @@ function lscolors() {
 	blinkwhite='\E[5;1;37m';
 	alias ls='ls --color'
 }
-export -f lscolors
 
 
 function lsversion(){
@@ -481,6 +480,11 @@ function lslogin() {
 	echo -e "!!!! DEV BRANCH !!!!"
 }
 
-# Run these functions at source time
-ostype
-_aliases	 # Export the function aliases
+
+#########################
+#  Run At Source Time	#
+#########################
+ 
+export -f lscolors # make lscolors available to all modules
+ostype		   # Easy checking of what OS we're on
+_aliases	   # Export the function aliases
