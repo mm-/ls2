@@ -96,12 +96,14 @@ function lscolorprompt() {
 	local RED="\[\e[1;31m\]"
 	local GREEN="\[\e[1;32m\]"
 	local BROWN="\[\e[0;33m\]"
+	prompt="$BLUE[$RED\000LZShell$LIGHT_BLUE \t$BLUE]$GRAY=$LIGHT_GRAY-$GRAY=$BLUE<$RED${distro}$BLUE>$GRAY=$LIGHT_GRAY-$GRAY=$BLUE($CYAN\u$GRAY @ $LIGHT_CYAN\H$BLUE)\n$BLUE($YELLOW\w$BLUE)$NORM # "
+
 
         if [ "${distro}" == "Redhat/CentOS" ]; then
-                export PS1="$BLUE[$RED\000LZShell$LIGHT_BLUE \t$BLUE]$GRAY=$LIGHT_GRAY-$GRAY=$BLUE<$RED${distro}$BLUE>$GRAY=$LIGHT_GRAY-$GRAY=$BLUE($CYAN\u$GRAY @ $LIGHT_CYAN\H$BLUE)\n$BLUE($YELLOW\w$BLUE)$NORM # "
-        elif [ "${distro}" == "Ubuntu" ]; then
-                export PS1="$BLUE[$RED\000LZShell$LIGHT_BLUE \t$BLUE]$GRAY=$LIGHT_GRAY-$GRAY=$BLUE<$BROWN${distro}$BLUE>$GRAY=$LIGHT_GRAY-$GRAY=$BLUE($CYAN\u$GRAY @ $LIGHT_CYAN\H$BLUE)\n$BLUE($YELLOW\w$BLUE)$NORM # "
-        else
+        	export PS1=$prompt
+	elif [ "${distro}" == "Ubuntu" ]; then
+        	export PS1=$prompt
+	else
                 bwprompt
         fi  
 }
