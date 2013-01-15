@@ -48,7 +48,8 @@ function _lz() {
 #        opts="${opts} crtchk rpaf pma nginx haproxy hppool nodejs mytuner"
 #        opts="${opts} rblcheck"
 
-	opts=`ls -1 $LZS_MOD_PATH | cut -d . -f 1`
+
+#	opts=`ls -1 $LZS_MOD_PATH | cut -d . -f 1`
   	
         COMPREPLY=( $(compgen -W "${opts}" -- $cur) )
 }
