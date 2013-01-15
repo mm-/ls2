@@ -496,5 +496,5 @@ function lslogin() {
 
 # Run these functions at source time
 ostype
-complete -F _lz lz	# Tab completion stuff
+#complete -F _lz lz	# Tab completion stuff
 _aliases	 # Export the function aliases
