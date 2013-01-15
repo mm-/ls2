@@ -484,6 +484,8 @@ function lslogin() {
 	#lscustomlogin		
 
 	echo -e "ls2 - mm"
+	echo -e ""
+	echo -e "!!!! DEV BRANCH !!!!"
 }
 
 # Run these functions at source time
