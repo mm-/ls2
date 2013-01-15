@@ -66,6 +66,8 @@ function lscolors() {
 	blinkwhite='\E[5;1;37m';
 	alias ls='ls --color'
 }
+export -f lscolors
+
 
 function lsversion(){
 	# display version information 
@@ -84,7 +86,7 @@ function lscolorprompt() {
 	local BLUE="\[\033[0;34m\]" 
 	local RED="\[\e[1;31m\]"
 	local GREEN="\[\e[1;32m\]"
-	local BROWN="\[\e[0;33m\]"
+	loc
 	prompt="$BLUE[$RED\000LZShell$LIGHT_BLUE \t$BLUE]$GRAY=$LIGHT_GRAY-$GRAY=$BLUE<$RED${distro}$BLUE>$GRAY=$LIGHT_GRAY-$GRAY=$BLUE($CYAN\u$GRAY @ $LIGHT_CYAN\H$BLUE)\n$BLUE($YELLOW\w$BLUE)$NORM # "
 
 
