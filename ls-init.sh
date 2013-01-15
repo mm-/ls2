@@ -43,10 +43,13 @@ function _lz() {
         local cur opts
         cur=${COMP_WORDS[COMP_CWORD]}
         # Append new functions here
-        opts="ap apcheck apdocs approc cloudkick postfix vhost vsftpd"
-        opts="${opts} lsync wordpress drupal webmin varnish concurchk"
-        opts="${opts} crtchk rpaf pma nginx haproxy hppool nodejs mytuner"
-        opts="${opts} rblcheck"
+#        opts="ap apcheck apdocs approc cloudkick postfix vhost vsftpd"
+#        opts="${opts} lsync wordpress drupal webmin varnish concurchk"
+#        opts="${opts} crtchk rpaf pma nginx haproxy hppool nodejs mytuner"
+#        opts="${opts} rblcheck"
+
+	opts=`ls -1 $LZS_MOD_PATH | cut -d . -f 1`
+  	
         COMPREPLY=( $(compgen -W "${opts}" -- $cur) )
 }
 
