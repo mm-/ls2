@@ -30,4 +30,6 @@ fi
 return 0;
 }
 
+
+lscolors
 mysql_login
