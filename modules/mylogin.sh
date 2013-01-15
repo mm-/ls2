@@ -10,7 +10,6 @@ if [ -e /etc/psa/.psa.shadow ]; then
 echo -e "[ls-scr] $brightyellow \bUsing Plesk's admin login. $norm"
 mysql -u admin -p`cat /etc/psa/.psa.shadow`
 else
-i
 if [ -e /root/.my.cnf ]; then
 echo -e "[ls-scr] $brightwhite \bFound a local $brightyellow \bmy.cnf $brightwhite \bin root's homedir, attempting to login without password prompt. $norm"
 $mysql_client
